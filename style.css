@@ -1,0 +1,143 @@
+:root {
+  --bg: #0d1117;
+  --text: #e2e8f0;
+  --card: #161b22;
+  --accent: #3b82f6;
+}
+body.light {
+  --bg: #ffffff;
+  --text: #111;
+  --card: #f4f4f8;
+  --accent: #2563eb;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+.site-header {
+  background: var(--card);
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+}
+.settings-wrapper {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.icon-btn {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.clean-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.settings-menu {
+  background: var(--card);
+  padding: 0.7rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.hidden {
+  display: none !important;
+}
+.secret-button {
+  background: transparent;
+  border: 1px dashed var(--accent);
+  color: var(--accent);
+  padding: 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.accordion-toggle {
+  width: 100%;
+  background: var(--card);
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0.95);
+  transition: all 0.4s ease;
+}
+.accordion-content.open {
+  max-height: 2000px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+.floating-apply {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+}
+.overseer {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: url('https://cdn.discordapp.com/attachments/1205536956830978098/1386053918555111484/Screenshot_2025-06-21_135051-removebg-preview.png?ex=68584ecd&is=6856fd4d&hm=afc9a85478b612342749c2e1e0382dd4b26396b6b58e5e835dff29c23fc04fa4') no-repeat center/contain;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+.overseer:hover {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glitch-msg {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-family: monospace;
+  opacity: 0.6;
+  z-index: 1000;
+  animation: blink 1.5s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.1; }
+}

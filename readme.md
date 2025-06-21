@@ -1,79 +1,80 @@
-# 🧠 Vexrune RP – The Simulation Has Cracked
+Minecraft Roleplay Casting Website
 
-> A Minecraft cinematic roleplay where the world is not what it seems...  
-> Join the experience. Join the illusion. Or wake up.
+This repository contains a simple static website used to recruit voice and body actors for a Minecraft roleplay project. The website is fully client side and requires no backend code. It includes animations, a call to action button, and a popup form using [Tally](https://tally.so/).
 
-Welcome to the official **[Vexrune RP](https://www.youtube.com/@vexrunerp)** website repository — a mysterious, animated, easter-egg-packed landing page for recruiting talented performers into a glitchy Minecraft simulation.  
+## Getting Started
 
-If you want to **join the RP**, **fork this project**, or **uncover hidden secrets**, you're in the right place.
+1. Clone the repository or download the files.
+2. Open `index.html` in a modern web browser. No other setup is required.
 
----
+## How It Works
 
-## 🌐 Live Website
+The site consists of three files:
 
-You can host this site using [GitHub Pages](https://pages.github.com/):  
+- `index.html` – the main page with the Tally popup integration
+- `style.css` – styles and basic animations
+- `script.js` – a small script to reveal elements on scroll
 
+The Tally widget script is loaded in the `<head>` of `index.html` so that clicking the **Apply Now** button opens the form as a popup. You can also trigger the form using URL hashes or by calling `Tally.openPopup()` from JavaScript, as described below.
 
-To view it locally, just open `index.html` in your browser.
+### Popup Usage
 
----
+- **Button Attributes** – the button in the page has `data-tally-open="3jqX5R"` plus extra attributes for an emoji label and animation. When clicked, Tally displays the embedded form.
+- **URL Hash** – you may also create a link to `#tally-open=3jqX5R` in order to open the popup on page load or when a link is clicked.
+- **JavaScript API** – advanced behavior can be implemented with `window.Tally`. For example:
 
-## 📥 How to Join Vexrune RP
+```html
+<script>
+Tally.openPopup('3jqX5R', { layout: 'modal' });
+</script>
+```
 
-Whether you're an aspiring **voice actor**, **body actor**, **builder**, or **storyteller**, here's how to enter the simulation:
+For full documentation see [Tally](https://tally.so/).
 
-### 🧭 Step-by-Step
+## Reposting or Hosting This Site
 
-1. Clone or open the site (`index.html`) in a browser.
-2. Scroll to the **Major Info** section (already expanded).
-3. **Watch the trailer** – [click here to view on YouTube](https://www.youtube.com/watch?v=qTRdBxSOvJA).
-4. Click the **[“Apply Now”](https://tally.so/r/3jqX5R)** button.
-5. Fill out the **Tally.so form**:
-   - Pick a role (Voice Actor, Builder, etc.)
-   - Share your skills
-   - Drop your Discord tag (we’ll contact you via `@fluxray`)
-6. Complete your test (if asked).
-7. Get accepted, get added to the secret lore server.  
-   Simulation begins...
+1. Fork this repository or clone it to your machine.
+2. Do not make too many changes (branding, styling, or content).
+3. Upload the files to any static web host (GitHub Pages, Netlify, Vercel, or your own server).
+4. Ensure the form ID (`3jqX5R`) remains in place so that submissions go to the correct Tally form.
 
----
+### GitHub Pages Example
 
-## ✨ Features
+1. Fork the repo on GitHub.
+2. In repository settings, enable GitHub Pages and point it to the `main` branch.
+3. Your site will be available at `https://<username>.github.io/<repository>/`.
 
-| Feature                | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| 🌗 Dark/Light Mode      | Toggle from the ⚙️ settings menu                                            |
-| 🧠 Animated Sections    | Accordion-style expand/collapse content                                     |
-| 👁 Secret Overseer      | Hidden NPC appears after secret activation (4 silent clicks)                |
-| 🛰 Fake API Call         | Triggers a POST to a fake overseer endpoint silently                       |
-| 💬 Hidden Console Logs  | Open DevTools (F12) and click the secret button to discover more            |
-| 🎥 Trailer Embed        | [YouTube Trailer](https://www.youtube.com/watch?v=qTRdBxSOvJA) plays inline |
-| 📨 Floating Apply Button| Quick access form launcher in bottom right corner                           |
+## Joining the Roleplay
 
----
+1. Visit the site and click **Apply Now**.
+2. A popup form will appear asking for your details and experience.
+3. Submit the form; the team will review your application and contact you if you are a match.
 
-## 🧪 Developer Easter Eggs
+### Tips for Applicants
 
-You didn't hear this from us... but:
+- Have a working microphone if you are applying as a voice actor.
+- Make sure your computer can run Minecraft with mods if required.
+- Be ready to commit time for recording sessions.
 
-- The ⚙️ menu hides a **⨂ button**.
-- Clicking it **4 times in 5 seconds** (in dark mode only) silently **summons the Overseer**.
-- The Overseer is only visible in shadows... until you hover.
-- It also sends a [POST request](https://api.vexrune.ai/overseer/ping) to an (imaginary?) API.
-- And yes, there's a creepy console message too 👁️
+## Project Structure
 
-Open your browser console and try it.  
-We dare you.
+```
+.
+├── README.md   <-- this file
+├── index.html  <-- main webpage with popup
+├── style.css   <-- page styles and animation
+└── script.js   <-- scroll reveal script
+```
 
----
+## Customization
 
-## ⚙️ How to Fork This Project
+- **Colors & Fonts** – edit `style.css` to match your branding.
+- **Form** – change the form ID in `index.html` (and optionally `script.js`) if you have a different Tally form.
+- **Animations** – the `.animate` class causes content to fade in when scrolled into view. Add this class to any element you want animated.
 
-You can fork and remix this site to build your own RP world.
+## Credits
 
-### 🔁 1. Fork It
-Click [**Fork this repo**](https://github.com/YOUR-USERNAME/YOUR-FORK) and clone it locally:
+- HTML and CSS by Cody-Nexgen.
+- Popup form powered by [Tally.so](https://tally.so/).
 
-```bash
-git clone https://github.com/YOUR-USERNAME/vexrune-rp-site.git
-cd vexrune-rp-site
+Enjoy building your Minecraft roleplay community!
