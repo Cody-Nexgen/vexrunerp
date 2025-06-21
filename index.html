@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vexrune RP – Minecraft Simulation Roleplay</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>🧠 Vexrune RP</h1>
+      <p class="tagline">A Minecraft roleplay where the world is not what it seems...</p>
+
+      <div class="settings-wrapper">
+        <button id="settingsIcon" class="clean-btn icon-btn">⚙️</button>
+        <div id="settingsMenu" class="settings-menu hidden">
+          <button id="toggleMode" class="clean-btn">🌗 Toggle Theme</button>
+          <button id="secretBtn" class="clean-btn secret-button">⨂</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="accordion">
+      <button class="accordion-toggle" data-target="majorGroup">📘 Major Info</button>
+      <div id="majorGroup" class="accordion-content open">
+        <div class="card">
+          <h2>About Vexrune RP</h2>
+          <p>Vexrune RP is a Minecraft story where players unknowingly live in a simulation. As glitches grow, secrets unravel.</p>
+        </div>
+        <div class="card">
+          <h2>How to Join</h2>
+          <ul>
+            <li>Watch the trailer</li>
+            <li>Click "Apply Now" below</li>
+            <li>Choose a role (VA, builder, etc)</li>
+            <li>Submit + await Discord DM</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Trailer</h2>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/qTRdBxSOvJA" title="Vexrune RP Trailer" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <button id="learnMoreBtn" class="learn-more-btn">🔍 Learn More</button>
+      </div>
+
+      <button class="accordion-toggle" data-target="minorGroup">🔍 Minor Info</button>
+      <div id="minorGroup" class="accordion-content">
+        <div class="card">
+          <h2>📜 What is Vexrune RP?</h2>
+          <p>It's a cinematic, roleplay-driven Minecraft experience where players slowly realize their world is fake. The simulation is breaking. Will you escape? Or control it?</p>
+        </div>
+        <div class="card">
+          <h2>🖱️ Step-by-Step Guide</h2>
+          <ol>
+            <li>Click the “Apply Now” button</li>
+            <li>Fill out the Tally form</li>
+            <li>Pick a role & leave Discord contact</li>
+            <li>Wait for your audition challenge</li>
+            <li>Enter the simulation…</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h2>👁️ The Overseer</h2>
+          <p>The Overseer watches the world unfold. If you see him, you weren’t supposed to.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <button class="floating-apply" data-tally-open="3jqX5R" data-tally-emoji-text="📩" data-tally-emoji-animation="pulse">
+    Apply Now
+  </button>
+
+  <div id="overseer" class="overseer hidden"></div>
+  <div id="glitch-msg" class="glitch-msg hidden">[simulation unstable...]</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
